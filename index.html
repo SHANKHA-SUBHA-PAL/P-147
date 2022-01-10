@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html>
+
+    <head>
+        <script src="https://aframe.io/releases/1.2.0/aframe.min.js"></script>
+    </head>
+
+    <body>
+        <a-scene background="color:#FCA68B">
+
+            <!--ASSETS MANAGEMENT AREA-->
+            <a-assets>
+                <a-asset-item id="dinnerTable-obj" src="./Modules/Table/tinker.obj"></a-asset-item>
+                <a-asset-item id="dinnerTable-mtl" src="./Modules/Table/obj.mtl"></a-asset-item>
+                <a-asset-item id="chair-obj" src="./Modules/Chair/tinker.obj"></a-asset-item>
+                <a-asset-item id="chair-mtl" src="./Modules/Chair/obj.mtl"></a-asset-item>
+                <a-asset-item id="chair2-obj" src="./Modules/Chair/tinker.obj"></a-asset-item>
+                <a-asset-item id="chair2-mtl" src="./Modules/Chair/obj.mtl"></a-asset-item>
+                <a-asset-item id="tube-obj" src="./Modules/Tubelight/tinker.obj"></a-asset-item>
+                <a-asset-item id="tube-mtl" src="./Modules/Tubelight/obj.mtl"></a-asset-item>
+            </a-assets>
+            
+            <a-entity id="rig" position="-2.2 8 36" rotation="0 0 0">
+                <a-camera id="camera"></a-camera>
+            </a-entity>
+            <a-plane
+            id="floor"
+            src="FLOOR.jpg"
+            position="0 0 5"
+            rotation="-90 0 0"
+            height="50"
+            width="50"           
+            ></a-plane>
+            <a-entity obj-model="obj: #dinnerTable-obj; mtl: #dinnerTable-mtl"  position="0 0 -6" rotation="-90 0 0" scale=".2 .2 .2"></a-entity>
+            <a-entity obj-model="obj: #chair-obj; mtl: #chair-mtl"  position="3 0 -5.7" rotation="-90 0 90"scale="0.15 0.15 0.15"></a-entity>
+            <a-entity obj-model="obj: #chair2-obj; mtl: #chair2-mtl"  position="-6 0 -5.7" rotation="-90 0 -90" scale="0.15 0.15 0.15"></a-entity>
+            <a-entity obj-model="obj: #dinnerTable-obj; mtl: #dinnerTable-mtl"  position="-0.5 0 16" rotation="-90 0 0" scale=".2 .2 .2"></a-entity>
+            <a-entity obj-model="obj: #chair-obj; mtl: #chair-mtl"  position="3 0 16" rotation="-90 0 90"scale="0.15 0.15 0.15"></a-entity>
+            <a-entity obj-model="obj: #chair2-obj; mtl: #chair2-mtl"  position="-6 0 16" rotation="-90 0 -90" scale="0.15 0.15 0.15"></a-entity>
+            <a-plane
+            id="floor"
+            src="wall.jpg"
+            position="0 20 -20"
+            rotation="0 0 0"
+            height="40"
+            width="50"           
+            ></a-plane>
+            <a-entity obj-model="obj: #tube-obj; mtl: #tube-mtl"  position="8.5 38 -20" rotation="90 0 0"scale="0.5 0.2 0.15"></a-entity>
+            
+        </a-scene>
+    </body>
+
+</html>
